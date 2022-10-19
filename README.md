@@ -17,4 +17,30 @@ else:
 ```
 ## Milestone 2
 ---
+In this milestone, I built on the last one and created two new functions. The first function checks that the guess is in the word and ensures that the guess is in lower case. Then the second function bulids on the code from the first milestone by incoparating it into a while loop which will continously run the code by setting it to True until the input matches the conditions which are that it needs to be one character and alphabetical. 
 
+```python
+import random
+word_list = ['apple', 'orange', 'lemon', 'watermelon', 'pear']
+word=random.choice(word_list)
+
+def check_guess(guess):
+    guess = guess.lower()
+    if guess in word:
+        print('Good guess! {} is in the word'.format(guess))
+    else:
+         print('Sorry, {} is not in the word. Try again'.format(guess))
+
+
+def ask_for_input():
+    while True:
+        guess = input('Enter a single letter ')
+        if len(guess) == 1 and guess.isalpha() == True:
+            break
+        else:
+            print('Invalid letter. Please, enter a single alphabetical character.')
+
+    check_guess(guess)
+
+ask_for_input()
+```
