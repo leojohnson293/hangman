@@ -46,7 +46,8 @@ ask_for_input()
 ```
 ## Milestone 3
 ---
-In this milestone,
+In this milestone, I used object-oriented programming to create the Hangman game. Firstly, I defined a class which would be the main body of my hangman code and created my first method which is the init method to initialise the attributes to the class. In the parameters, I defined the word list and the number of lives as well as the self variable. The attributes defined in this method are the word list and the number of lives from the parameters. But also I initialised the word thats randomly picked by the code, the word guessed which is a list of the letters of the word with the ones not guess replaced by '_' , the number of unique letters not guessed and a list of guesses which at the start of the game is empty.  
+Then I created two new methods which build upon the functions created in the last milestone. First is the check_guess() method which now has a for-loop which if the guess is correct, replaces the '_' in the word_guessed list which the guessed letter using enumerate() to iterate over the word to find the indexes of the guess in the word. Then by assigning the word_guessed to the guess, the for-loop will replace the '_' with the guesseed letter. Outside the the for-loops, the number of uniques is reduced by 1. Then if the guess is wrong, a statement will be printed and the number of lives is reduced to one. Then the ask_for_input() method is pretty much the same as the last milestone but with an elif statement which tells the user if the already inputted a letter. Finally, the instance is called with the ask_for_input.    
 ```python
 import random
 

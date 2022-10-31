@@ -1,7 +1,7 @@
 import random
 
 class Hangman:
-    def __init__(self, word_list=['apple', 'orange', 'lemon', 'watermelon', 'pear'], num_lives=5):
+    def __init__(self, word_list=['apple', 'orange', 'lemon', 'watermelon', 'pear', 'strawberry'], num_lives=5):
         self.word_list = word_list 
         self.num_lives = num_lives
         self.word = random.choice(self.word_list)  
@@ -13,12 +13,10 @@ class Hangman:
         guess = guess.lower()
         if guess in self.word:
             self.num_letters = self.num_letters - 1
-            for i in self.word:
-                i = self.word.find(guess)
-                self.word_guessed[i] = guess
-            for j in self.word:
-                j = self.word.rfind(guess)
-                self.word_guessed[j] = guess
+            for index, char in enumerate(self.word):
+                if guess in self.word:
+                    if char == guess:
+                        self.word_guessed[index] = guess
         else:
             self.num_lives = self.num_lives - 1
             print('Sorry, {} is not in the word'.format(guess))
