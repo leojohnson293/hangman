@@ -10,7 +10,6 @@ def check_guess(guess):
     else:
          print('Sorry, {} is not in the word. Try again'.format(guess))
 
-
 def ask_for_input():
     while True:
         guess = input('Enter a single letter ')
@@ -20,6 +19,7 @@ def ask_for_input():
             print('Invalid letter. Please, enter a single alphabetical character.')
 
     check_guess(guess)
+
 
 ask_for_input()
        
