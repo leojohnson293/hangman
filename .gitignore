@@ -1,3 +1,6 @@
 __pycache__
 hangman
 .github
+*.class
+*.java
+HangmanGPT.java

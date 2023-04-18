@@ -20,7 +20,7 @@ class Hangman:
         else:
             self.num_lives = self.num_lives - 1
             print('Sorry, {} is not in the word'.format(guess))
-            print('You have {} lives left'.format(guess))
+            print('You have {} lives left'.format(self.num_lives))
         self.list_of_guesses.append(self.guess)
     
         print(self.word_guessed)
